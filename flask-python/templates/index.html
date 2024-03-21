@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <title>Energy Analytics</title>
+    <style>
+      body {
+        background-image: url('/static/images/natural-gas.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1 align ="center">Energy Resources</h1>
+      {% block content %}{% endblock %}
+    </div>
+
+    <div class="navbar">
+      <div class="subnav">
+        <button class="subnavbtn">Natural Gas <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="#company">Visualizations</a>
+          <a href="#team">Forecasting</a>
+        </div>
+      </div> 
+      <div class="subnav">
+        <button class="subnavbtn">Petroleum and Other Liquids <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="#bring">Visualizations</a>
+          <a href="#deliver">Forecasting</a>
+        </div>
+      </div> 
+      <div class="subnav">
+        <button class="subnavbtn">Electricity<i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="#bring">Visualizations</a>
+          <a href="#deliver">Forcasting</a>
+
+        </div>
+      </div> 
+
+    <ol>
+      <li><a  href="natural_gas.html">Natural Gas</a></li>
+      <div class="table-data">
+        {{returnList | safe}};
+    </div>
+      <li><a  href="elec.html">Electricity</a></li>
+      <div class="table-data">
+        {{returnList1 | safe}};
+    </div>
+      <li><a href="pet.html">Petroleum and Other Liquids</a></li>
+      <div class="table-data">
+        {{returnList2 | safe}};
+    </div>
+    </ol>
+  </body>
+</html>
+
+
+<!--<head>
+    <h3 class="table-heading">Energy Resources</h3>
+    <title>Energy</title>
+    <style>
+  
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head> -->
+
+<!--<h3 class="table-heading">Energy Analytics of USA</h3>
+<div class="page">
+<div class="table-data">
+    {{returnList | safe}};
+</div>
+</div> -->
